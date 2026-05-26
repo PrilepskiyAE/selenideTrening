@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- Главный блок TestNG: описывает набор тестов -->
+<suite name="Test Suite">
+
+    <!-- Один логический запуск (можно добавить несколько тестов внутри одной suite) -->
+    <test name="Login and Price Tests">
+
+        <!-- Указываем, какие именно тестовые классы запускать -->
+        <classes>
+            <!-- Тест авторизации -->
+            <class name="test.loggingtest.LoggingTest"/>
+
+            <!-- Тест подсчёта суммы в корзине -->
+            <class name="test.pricesumtest.PriceSumTest"/>
+        </classes>
+
+    </test>
+</suite>
