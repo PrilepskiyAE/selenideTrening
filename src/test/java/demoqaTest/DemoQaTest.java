@@ -20,14 +20,14 @@ public class DemoQaTest extends BaseTest {
    public void clickButtonTest(){
         MainPage test = new MainPage(BASE_URL);
         test.navigateElementsPage().navigateButtonPage().btnClickAndDynamicText().shouldBe(Condition.visible)
-                .shouldHave(Condition.exactText(MESSAGE_DYNAMIC));;
+                .shouldHave(Condition.exactText(MESSAGE_DYNAMIC));
         assertEquals(BUTTONS_URL, WebDriverRunner.url());
     }
     @Test
     public void rightClickButtonTest(){
         MainPage test = new MainPage(BASE_URL);
         test.navigateElementsPage().navigateButtonPage().btnRightClickAndDynamicText().shouldBe(Condition.visible)
-                .shouldHave(Condition.exactText(MESSAGE_RIGHT));;
+                .shouldHave(Condition.exactText(MESSAGE_RIGHT));
         assertEquals(BUTTONS_URL, WebDriverRunner.url());
     }
     @Test
