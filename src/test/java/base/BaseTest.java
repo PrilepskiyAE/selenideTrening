@@ -1,16 +1,14 @@
-package selenideTest.base;
+package base;
 
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.junit.Before;
 import org.junit.After;
 
 
-abstract public class BaseTestv2 {
+abstract public class BaseTest {
     public void setUp(){
         //WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
@@ -26,6 +24,7 @@ abstract public class BaseTestv2 {
     }
     @After
     public void tearDown(){
+
         Selenide.closeWebDriver();
     }
 }
