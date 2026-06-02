@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="9.876" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="22.512" tests="13" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.class.path" value="/snap/intellij-idea-community/762/plugins/maven/lib/maven3/boot/plexus-classworlds-2.9.0.jar"/>
     <property name="java.vm.vendor" value="Ubuntu"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://ubuntu.com/"/>
     <property name="user.timezone" value="Asia/Novosibirsk"/>
-    <property name="maven.conf" value="/usr/share/maven/conf"/>
+    <property name="maven.conf" value="/snap/intellij-idea-community/762/plugins/maven/lib/maven3/conf"/>
     <property name="java.vm.specification.version" value="21"/>
     <property name="os.name" value="Linux"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Didea.version=2026.1.2 -Dmaven.ext.class.path=/snap/intellij-idea-community/762/plugins/maven/lib/intellij.maven.rt/maven-event-listener.jar -Djansi.passthrough=true -Dstyle.color=always -Dmaven.repo.local=/home/admin/.m2/repository test -f pom.xml"/>
     <property name="jdk.debug" value="release"/>
-    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="maven.home" value="/snap/intellij-idea-community/762/plugins/maven/lib/maven3"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/admin"/>
     <property name="user.language" value="ru"/>
-    <property name="jansi.mode" value="force"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="jansi.mode" value="force"/>
     <property name="java.version.date" value="2026-04-21"/>
     <property name="java.home" value="/usr/lib/jvm/java-21-openjdk-amd64"/>
     <property name="file.separator" value="/"/>
+    <property name="style.color" value="always"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
@@ -39,12 +40,15 @@
     <property name="file.encoding" value="UTF-8"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="/snap/intellij-idea-community/762/plugins/maven/lib/intellij.maven.rt/maven-event-listener.jar"/>
     <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-21"/>
     <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="idea.version" value="2026.1.2"/>
     <property name="java.version" value="21.0.11"/>
     <property name="user.dir" value="/home/admin/IdeaProjects/selenideTrening"/>
     <property name="os.arch" value="amd64"/>
     <property name="maven.multiModuleProjectDirectory" value="/home/admin/IdeaProjects/selenideTrening"/>
+    <property name="jansi.passthrough" value="true"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
@@ -52,15 +56,43 @@
     <property name="stderr.encoding" value="UTF-8"/>
     <property name="java.vendor" value="Ubuntu"/>
     <property name="java.vm.version" value="21.0.11+10-1-24.04.2-Ubuntu"/>
-    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="classworlds.conf" value="/snap/intellij-idea-community/762/plugins/maven/lib/maven3/bin/m2.conf"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
+    <property name="library.jansi.path" value="/snap/intellij-idea-community/762/plugins/maven/lib/maven3/lib/jansi-native"/>
+    <property name="maven.repo.local" value="/home/admin/.m2/repository"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="checkButtonTest" classname="demoqaTest.DemoQaTest" time="3.626"/>
-  <testcase name="clickButtonTest" classname="demoqaTest.DemoQaTest" time="0.714"/>
-  <testcase name="doubleClickButtonTest" classname="demoqaTest.DemoQaTest" time="1.041"/>
-  <testcase name="radioButtonTest" classname="demoqaTest.DemoQaTest" time="1.041"/>
-  <testcase name="rightClickButtonTest" classname="demoqaTest.DemoQaTest" time="0.876"/>
-  <testcase name="webTablesTest" classname="demoqaTest.DemoQaTest" time="1.915"/>
+  <testcase name="checkButtonTest" classname="demoqaTest.DemoQaTest" time="3.116"/>
+  <testcase name="clickButtonTest" classname="demoqaTest.DemoQaTest" time="0.745"/>
+  <testcase name="doubleClickButtonTest" classname="demoqaTest.DemoQaTest" time="0.917"/>
+  <testcase name="radioButtonTest" classname="demoqaTest.DemoQaTest" time="0.792"/>
+  <testcase name="rightClickButtonTest" classname="demoqaTest.DemoQaTest" time="0.674"/>
+  <testcase name="webTablesTest" classname="demoqaTest.DemoQaTest" time="1.854"/>
+  <testcase name="checkHref" classname="selenideTest.AppleTest" time="8.953">
+    <failure message="Invalid element state [By.xpath: //input[@type=&apos;text&apos;]]: element not interactable&#10;Screenshot: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.png&#10;Page source: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.html&#10;Timeout: 4 s.&#10;Caused by: ElementNotInteractableException: element not interactable" type="com.codeborne.selenide.ex.InvalidStateError">com.codeborne.selenide.ex.InvalidStateError: 
+Invalid element state [By.xpath: //input[@type='text']]: element not interactable
+Screenshot: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.png
+Page source: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.html
+Timeout: 4 s.
+Caused by: ElementNotInteractableException: element not interactable
+	at selenideTest.AppleTest.checkHref(AppleTest.java:16)
+Caused by: org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=148.0.7778.178)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-29-generic', java.version: '21.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5376577f67549039182ca449334ca727, sendKeysToElement {id=f.2744C8377E4ED7013BA28C2625A6606E.d.C399732AE5743D67471C5690B84E4283.e.23, value=[Ljava.lang.CharSequence;@52d6d273}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46129}, goog:processID: 183262, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:46129/devtoo..., se:cdpVersion: 148.0.7778.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (5376577f67549039182ca449334ca727)] -> xpath: //input[@type='text']]
+Session ID: 5376577f67549039182ca449334ca727
+	at selenideTest.AppleTest.checkHref(AppleTest.java:16)
+</failure>
+  </testcase>
+  <testcase name="correctStruct" classname="fakestoreapi.FakestoreapiTest" time="1.991"/>
+  <testcase name="correctStructToPOJO" classname="fakestoreapi.FakestoreapiTest" time="0.529"/>
+  <testcase name="createProductShouldReturn201AndCorrectData" classname="fakestoreapi.FakestoreapiTest" time="0.514"/>
+  <testcase name="createProductValidateResponseSchema" classname="fakestoreapi.FakestoreapiTest" time="0.895"/>
+  <testcase name="getProductByIdShouldReturn200AndCorrectData" classname="fakestoreapi.FakestoreapiTest" time="0.543"/>
+  <testcase name="getProductByIdValidateResponseStructure" classname="fakestoreapi.FakestoreapiTest" time="0.515"/>
 </testsuite>

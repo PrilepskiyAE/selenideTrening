@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>selenideTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 02 13:58:16 NOVT 2026</td>
+<td>Started on:</td><td>Tue Jun 02 16:48:39 NOVT 2026</td>
 </tr>
-<tr><td>Total time:</td><td>9 seconds (9241 ms)</td>
+<tr><td>Total time:</td><td>17 seconds (17073 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,124 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='selenideTest.AppleTest.checkHref()'><b>checkHref</b><br>Test class: selenideTest.AppleTest</td>
+<td><div><pre>Invalid element state [By.xpath: //input[@type=&apos;text&apos;]]: element not interactable
+Screenshot: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.png
+Page source: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.html
+Timeout: 4 s.
+Caused by: ElementNotInteractableException: element not interactable
+	at com.codeborne.selenide.impl.ExceptionWrapper.wrap(ExceptionWrapper.java:26)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:154)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
+	at jdk.proxy2/jdk.proxy2.$Proxy10.setValue(Unknown Source)
+	at selenideTest.page.MainPage.search(MainPage.java:16)
+	at selenideTest.AppleTest.checkHref(AppleTest.java:16)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=148.0.7778.178)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.17.0-29-generic&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5376577f67549039182ca449334ca727, sendKeysToElement {id=f.2744C8377E4ED7013BA28C2625A6606E.d.C399732AE5743D67471C5690B84E4283.e.23, value=[Ljava.lang.CharSequence;@52d6d273}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46129}, goog:processID: 183262, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:46129/devtoo..., se:cdpVersion: 148.0.7778.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (5376577f67549039182ca449334ca727)] -&gt; xpath: //input[@type=&apos;text&apos;]]
+Session ID: 5376577f67549039182ca449334ca727
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at com.codeborne.selenide.commands.SetValue.setValueForTextInput(SetValue.java:71)
+	at com.codeborne.selenide.commands.SetValue.execute(SetValue.java:43)
+	at com.codeborne.selenide.commands.SetValue.execute(SetValue.java:25)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:161)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
+	... 33 more
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace737892411", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace737892411'><pre>Invalid element state [By.xpath: //input[@type=&apos;text&apos;]]: element not interactable
+Screenshot: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.png
+Page source: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.html
+Timeout: 4 s.
+Caused by: ElementNotInteractableException: element not interactable
+	at com.codeborne.selenide.impl.ExceptionWrapper.wrap(ExceptionWrapper.java:26)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:154)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
+	at jdk.proxy2/jdk.proxy2.$Proxy10.setValue(Unknown Source)
+	at selenideTest.page.MainPage.search(MainPage.java:16)
+	at selenideTest.AppleTest.checkHref(AppleTest.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=148.0.7778.178)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.17.0-29-generic&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5376577f67549039182ca449334ca727, sendKeysToElement {id=f.2744C8377E4ED7013BA28C2625A6606E.d.C399732AE5743D67471C5690B84E4283.e.23, value=[Ljava.lang.CharSequence;@52d6d273}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46129}, goog:processID: 183262, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:46129/devtoo..., se:cdpVersion: 148.0.7778.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (5376577f67549039182ca449334ca727)] -&gt; xpath: //input[@type=&apos;text&apos;]]
+Session ID: 5376577f67549039182ca449334ca727
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at com.codeborne.selenide.commands.SetValue.setValueForTextInput(SetValue.java:71)
+	at com.codeborne.selenide.commands.SetValue.execute(SetValue.java:43)
+	at com.codeborne.selenide.commands.SetValue.execute(SetValue.java:25)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:161)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
+	... 33 more
+</pre></div></td>
+<td>8</td>
+<td>selenideTest.AppleTest@729d991e</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -79,32 +197,32 @@ function toggleAllBoxes() {
 <td title='demoqaTest.DemoQaTest.radioButtonTest()'><b>radioButtonTest</b><br>Test class: demoqaTest.DemoQaTest</td>
 <td></td>
 <td>0</td>
-<td>demoqaTest.DemoQaTest@1da2cb77</td></tr>
+<td>demoqaTest.DemoQaTest@17497425</td></tr>
 <tr>
 <td title='demoqaTest.DemoQaTest.webTablesTest()'><b>webTablesTest</b><br>Test class: demoqaTest.DemoQaTest</td>
 <td></td>
 <td>1</td>
-<td>demoqaTest.DemoQaTest@1da2cb77</td></tr>
+<td>demoqaTest.DemoQaTest@17497425</td></tr>
 <tr>
 <td title='demoqaTest.DemoQaTest.checkButtonTest()'><b>checkButtonTest</b><br>Test class: demoqaTest.DemoQaTest</td>
 <td></td>
 <td>3</td>
-<td>demoqaTest.DemoQaTest@1da2cb77</td></tr>
-<tr>
-<td title='demoqaTest.DemoQaTest.clickButtonTest()'><b>clickButtonTest</b><br>Test class: demoqaTest.DemoQaTest</td>
-<td></td>
-<td>0</td>
-<td>demoqaTest.DemoQaTest@1da2cb77</td></tr>
+<td>demoqaTest.DemoQaTest@17497425</td></tr>
 <tr>
 <td title='demoqaTest.DemoQaTest.doubleClickButtonTest()'><b>doubleClickButtonTest</b><br>Test class: demoqaTest.DemoQaTest</td>
 <td></td>
-<td>1</td>
-<td>demoqaTest.DemoQaTest@1da2cb77</td></tr>
+<td>0</td>
+<td>demoqaTest.DemoQaTest@17497425</td></tr>
 <tr>
 <td title='demoqaTest.DemoQaTest.rightClickButtonTest()'><b>rightClickButtonTest</b><br>Test class: demoqaTest.DemoQaTest</td>
 <td></td>
 <td>0</td>
-<td>demoqaTest.DemoQaTest@1da2cb77</td></tr>
+<td>demoqaTest.DemoQaTest@17497425</td></tr>
+<tr>
+<td title='demoqaTest.DemoQaTest.clickButtonTest()'><b>clickButtonTest</b><br>Test class: demoqaTest.DemoQaTest</td>
+<td></td>
+<td>0</td>
+<td>demoqaTest.DemoQaTest@17497425</td></tr>
 </table><p>
 </body>
 </html>

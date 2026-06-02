@@ -2,12 +2,14 @@ package demoqaTest;
 
 import base.BaseTest;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import demoqaTest.page.CheckBoxPage;
 import demoqaTest.page.MainPage;
 import demoqaTest.page.RadioButtonPage;
 import demoqaTest.page.WebTablesPage;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -29,6 +31,13 @@ public class DemoQaTest extends BaseTest {
     private final static String SALARY="2000";
     private final static String DEP="Testing";
 
+
+    @BeforeSuite
+    public void setUp(){
+        System.out.println("Запускается перед всеми тестами в Suite");
+        Configuration.browserSize = "1920x1080";
+        Configuration.headless = true;
+    }
 
 
     private final static int ROWS_SIZE = 3;
