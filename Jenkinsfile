@@ -1,14 +1,14 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3.9.9-openjdk-21'
-            args '-v $HOME/.m2:/root/.m2'  // кэшируем Maven-зависимости
-        }
-    }
+    agent any
 
     options {
         timeout(time: 30, unit: 'MINUTES')
         timestamps()
+    }
+
+    tools {
+        maven 'Maven 3.9.9'
+        jdk 'JDK 21'
     }
 
     stages {
