@@ -1,10 +1,5 @@
 pipeline {
-   agent {
-    docker {
-        image 'maven:3.8.6-openjdk-21'
-        args '-v $HOME/.m2:/root/.m2'
-    }
-}
+   agent any
     stages {
        stage('Verify Java Setup') {
     steps {
