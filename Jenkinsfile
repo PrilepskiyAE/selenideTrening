@@ -1,9 +1,14 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'maven:3.9.9-openjdk-21'
+            args '-v $HOME/.m2:/root/.m2'  // кэшируем Maven-зависимости
+        }
+    }
 
     options {
-        timeout(time: 30, unit: 'MINUTES')  // Таймаут сборки — не зависнет навсегда
-        timestamps()  // В логах будут метки времени
+        timeout(time: 30, unit: 'MINUTES')
+        timestamps()
     }
 
     stages {
@@ -15,7 +20,7 @@ pipeline {
 
         stage('Build and Test') {
             steps {
-                echo 'Запуск тестов...'
+                echo 'Запуск тестов на Java 21...'
                 sh 'mvn clean test'
             }
             post {
@@ -29,7 +34,6 @@ pipeline {
         stage('Generate Allure Report') {
             when {
                 expression {
-                    // Проверяем, что папка с результатами существует и не пуста
                     script {
                         def file = new File("${env.WORKSPACE}/target/allure-results")
                         return file.exists() && file.isDirectory() && file.list().length > 0
@@ -55,10 +59,10 @@ pipeline {
             cleanWs()
         }
         success {
-            echo 'Сборка прошла успешно!'
+            echo 'Сборка прошла успешно на Java 21!'
         }
         failure {
-            echo 'Сборка завершилась с ошибкой!'
+            echo 'Сборка завершилась с ошибкой на Java 21!'
         }
     }
 }
