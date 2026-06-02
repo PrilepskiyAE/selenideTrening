@@ -8,7 +8,8 @@ import demoqaTest.page.CheckBoxPage;
 import demoqaTest.page.MainPage;
 import demoqaTest.page.RadioButtonPage;
 import demoqaTest.page.WebTablesPage;
-import org.junit.Test;
+import org.testng.annotations.Test;
+
 import java.util.List;
 
 import static org.testng.AssertJUnit.assertEquals;

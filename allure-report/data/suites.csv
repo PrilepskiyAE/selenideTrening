@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jun 02 13:58:19 NOVT 2026","Tue Jun 02 13:58:20 NOVT 2026","711","Test Suite","selenideTest","demoqaTest.DemoQaTest","demoqaTest.DemoQaTest","clickButtonTest","clickButtonTest",""
+"passed","Tue Jun 02 13:58:21 NOVT 2026","Tue Jun 02 13:58:22 NOVT 2026","790","Test Suite","selenideTest","demoqaTest.DemoQaTest","demoqaTest.DemoQaTest","radioButtonTest","radioButtonTest",""
+"passed","Tue Jun 02 13:58:16 NOVT 2026","Tue Jun 02 13:58:19 NOVT 2026","3559","Test Suite","selenideTest","demoqaTest.DemoQaTest","demoqaTest.DemoQaTest","checkButtonTest","checkButtonTest",""
+"passed","Tue Jun 02 13:58:22 NOVT 2026","Tue Jun 02 13:58:23 NOVT 2026","875","Test Suite","selenideTest","demoqaTest.DemoQaTest","demoqaTest.DemoQaTest","rightClickButtonTest","rightClickButtonTest",""
+"passed","Tue Jun 02 13:58:23 NOVT 2026","Tue Jun 02 13:58:25 NOVT 2026","1914","Test Suite","selenideTest","demoqaTest.DemoQaTest","demoqaTest.DemoQaTest","webTablesTest","webTablesTest",""
+"passed","Tue Jun 02 13:58:20 NOVT 2026","Tue Jun 02 13:58:21 NOVT 2026","1041","Test Suite","selenideTest","demoqaTest.DemoQaTest","demoqaTest.DemoQaTest","doubleClickButtonTest","doubleClickButtonTest",""

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-06-02T13:58:16 NOVT" name="Test Suite" finished-at="2026-06-02T13:58:25 NOVT" duration-ms="9241">
+    <groups>
+    </groups>
+    <test started-at="2026-06-02T13:58:16 NOVT" name="selenideTest" finished-at="2026-06-02T13:58:25 NOVT" duration-ms="9241">
+      <class name="demoqaTest.DemoQaTest">
+        <test-method signature="checkButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@1da2cb77]" started-at="2026-06-02T13:58:16 NOVT" name="checkButtonTest" finished-at="2026-06-02T13:58:19 NOVT" duration-ms="3583" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkButtonTest -->
+        <test-method signature="clickButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@1da2cb77]" started-at="2026-06-02T13:58:19 NOVT" name="clickButtonTest" finished-at="2026-06-02T13:58:20 NOVT" duration-ms="712" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickButtonTest -->
+        <test-method signature="doubleClickButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@1da2cb77]" started-at="2026-06-02T13:58:20 NOVT" name="doubleClickButtonTest" finished-at="2026-06-02T13:58:21 NOVT" duration-ms="1041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doubleClickButtonTest -->
+        <test-method signature="radioButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@1da2cb77]" started-at="2026-06-02T13:58:21 NOVT" name="radioButtonTest" finished-at="2026-06-02T13:58:22 NOVT" duration-ms="790" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- radioButtonTest -->
+        <test-method signature="rightClickButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@1da2cb77]" started-at="2026-06-02T13:58:22 NOVT" name="rightClickButtonTest" finished-at="2026-06-02T13:58:23 NOVT" duration-ms="875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rightClickButtonTest -->
+        <test-method signature="webTablesTest()[pri:0, instance:demoqaTest.DemoQaTest@1da2cb77]" started-at="2026-06-02T13:58:23 NOVT" name="webTablesTest" finished-at="2026-06-02T13:58:25 NOVT" duration-ms="1915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webTablesTest -->
+      </class> <!-- demoqaTest.DemoQaTest -->
+    </test> <!-- selenideTest -->
+  </suite> <!-- Test Suite -->
+</testng-results>

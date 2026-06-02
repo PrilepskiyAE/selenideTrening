@@ -5,15 +5,15 @@
 <suite name="Test Suite">
 
     <!-- Один логический запуск (можно добавить несколько тестов внутри одной suite) -->
-    <test name="Login and Price Tests">
+    <test name="selenideTest">
 
         <!-- Указываем, какие именно тестовые классы запускать -->
         <classes>
             <!-- Тест авторизации -->
-            <class name="test.loggingtest.LoggingTest"/>
+            <class name="demoqaTest.DemoQaTest"/>
 
             <!-- Тест подсчёта суммы в корзине -->
-            <class name="test.pricesumtest.PriceSumTest"/>
+            <class name="selenideTest.AppleTest"/>
         </classes>
 
     </test>
