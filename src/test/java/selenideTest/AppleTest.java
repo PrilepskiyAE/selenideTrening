@@ -3,6 +3,7 @@ package selenideTest;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import base.BaseTest;
+import org.junit.jupiter.api.RepeatedTest;
 import selenideTest.page.MainPage;
 
 public class AppleTest extends BaseTest {
@@ -10,7 +11,7 @@ public class AppleTest extends BaseTest {
     private final static String SEARCH_STRING = "Чем iPhone 13 отличается от iPhone 12";
     private final static String EXPECTED_WORD = "iphone-12";
 
-    @Test
+    @RepeatedTest(5)
     public void checkHref(){
         Assertions.assertTrue(new MainPage(BASE_URL)
                 .search(SEARCH_STRING)

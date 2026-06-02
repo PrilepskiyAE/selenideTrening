@@ -1,1 +1,0 @@
-{"uuid":"387faf19-39ac-4b3b-a1b5-07c02c355cde","name":"selenideTrening","children":["6a74c59c-d272-441c-9f6e-b2c6a7b39441"],"befores":[],"afters":[{"name":"clearCookiesAndLocalStorage","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1779801798088,"stop":1779801798105}],"start":1779801796022,"stop":1779801798106}
