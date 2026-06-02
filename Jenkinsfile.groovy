@@ -24,7 +24,6 @@ pipeline {
             }
             post {
                 always {
-                    // Сохраняем результаты Allure для следующего этапа
                     archiveArtifacts artifacts: 'target/allure-results/**', allowEmptyArchive: true
                 }
             }
@@ -32,7 +31,6 @@ pipeline {
 
         stage('Generate Allure Report') {
             steps {
-                // Генерируем отчёт Allure
                 allure([
                         includeProperties: false,
                         jdk: '',
@@ -42,24 +40,11 @@ pipeline {
                 ])
             }
         }
-
-        stage('Publish JUnit Report') {
-            when {
-                expression { fileExists 'target/surefire-reports/*.xml' }
-            }
-            steps {
-                junit 'target/surefire-reports/*.xml'
-            }
-        }
     }
 
     post {
         always {
-            // Очищаем workspace после сборки
             cleanWs()
-        }
-        failure {
-            echo 'Pipeline failed!'
         }
     }
 }
