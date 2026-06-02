@@ -17,4 +17,11 @@
         </classes>
 
     </test>
+
+    <test name="RestTest">
+        <classes>
+             <class name="fakestoreapi.FakestoreapiTest"/>
+        </classes>
+    </test>
+
 </suite>

@@ -1,4 +1,24 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.876 s - in TestSuite
+Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 22.512 s <<< FAILURE! - in TestSuite
+checkHref(selenideTest.AppleTest)  Time elapsed: 8.953 s  <<< FAILURE!
+com.codeborne.selenide.ex.InvalidStateError: 
+Invalid element state [By.xpath: //input[@type='text']]: element not interactable
+Screenshot: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.png
+Page source: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.html
+Timeout: 4 s.
+Caused by: ElementNotInteractableException: element not interactable
+	at selenideTest.AppleTest.checkHref(AppleTest.java:16)
+Caused by: org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=148.0.7778.178)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-29-generic', java.version: '21.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5376577f67549039182ca449334ca727, sendKeysToElement {id=f.2744C8377E4ED7013BA28C2625A6606E.d.C399732AE5743D67471C5690B84E4283.e.23, value=[Ljava.lang.CharSequence;@52d6d273}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46129}, goog:processID: 183262, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:46129/devtoo..., se:cdpVersion: 148.0.7778.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (5376577f67549039182ca449334ca727)] -> xpath: //input[@type='text']]
+Session ID: 5376577f67549039182ca449334ca727
+	at selenideTest.AppleTest.checkHref(AppleTest.java:16)
+

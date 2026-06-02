@@ -1,37 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="12" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-02T13:58:16 NOVT" name="Test Suite" finished-at="2026-06-02T13:58:25 NOVT" duration-ms="9241">
+  <suite started-at="2026-06-02T16:48:39 NOVT" name="Test Suite" finished-at="2026-06-02T16:49:01 NOVT" duration-ms="22095">
     <groups>
     </groups>
-    <test started-at="2026-06-02T13:58:16 NOVT" name="selenideTest" finished-at="2026-06-02T13:58:25 NOVT" duration-ms="9241">
+    <test started-at="2026-06-02T16:48:39 NOVT" name="selenideTest" finished-at="2026-06-02T16:48:56 NOVT" duration-ms="17073">
       <class name="demoqaTest.DemoQaTest">
-        <test-method signature="checkButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@1da2cb77]" started-at="2026-06-02T13:58:16 NOVT" name="checkButtonTest" finished-at="2026-06-02T13:58:19 NOVT" duration-ms="3583" status="PASS">
+        <test-method signature="checkButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@17497425]" started-at="2026-06-02T16:48:39 NOVT" name="checkButtonTest" finished-at="2026-06-02T16:48:42 NOVT" duration-ms="3083" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkButtonTest -->
-        <test-method signature="clickButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@1da2cb77]" started-at="2026-06-02T13:58:19 NOVT" name="clickButtonTest" finished-at="2026-06-02T13:58:20 NOVT" duration-ms="712" status="PASS">
+        <test-method signature="clickButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@17497425]" started-at="2026-06-02T16:48:42 NOVT" name="clickButtonTest" finished-at="2026-06-02T16:48:43 NOVT" duration-ms="742" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickButtonTest -->
-        <test-method signature="doubleClickButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@1da2cb77]" started-at="2026-06-02T13:58:20 NOVT" name="doubleClickButtonTest" finished-at="2026-06-02T13:58:21 NOVT" duration-ms="1041" status="PASS">
+        <test-method signature="doubleClickButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@17497425]" started-at="2026-06-02T16:48:43 NOVT" name="doubleClickButtonTest" finished-at="2026-06-02T16:48:44 NOVT" duration-ms="917" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doubleClickButtonTest -->
-        <test-method signature="radioButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@1da2cb77]" started-at="2026-06-02T13:58:21 NOVT" name="radioButtonTest" finished-at="2026-06-02T13:58:22 NOVT" duration-ms="790" status="PASS">
+        <test-method signature="radioButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@17497425]" started-at="2026-06-02T16:48:44 NOVT" name="radioButtonTest" finished-at="2026-06-02T16:48:44 NOVT" duration-ms="792" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- radioButtonTest -->
-        <test-method signature="rightClickButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@1da2cb77]" started-at="2026-06-02T13:58:22 NOVT" name="rightClickButtonTest" finished-at="2026-06-02T13:58:23 NOVT" duration-ms="875" status="PASS">
+        <test-method signature="rightClickButtonTest()[pri:0, instance:demoqaTest.DemoQaTest@17497425]" started-at="2026-06-02T16:48:44 NOVT" name="rightClickButtonTest" finished-at="2026-06-02T16:48:45 NOVT" duration-ms="673" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- rightClickButtonTest -->
-        <test-method signature="webTablesTest()[pri:0, instance:demoqaTest.DemoQaTest@1da2cb77]" started-at="2026-06-02T13:58:23 NOVT" name="webTablesTest" finished-at="2026-06-02T13:58:25 NOVT" duration-ms="1915" status="PASS">
+        <test-method signature="webTablesTest()[pri:0, instance:demoqaTest.DemoQaTest@17497425]" started-at="2026-06-02T16:48:45 NOVT" name="webTablesTest" finished-at="2026-06-02T16:48:47 NOVT" duration-ms="1853" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- webTablesTest -->
       </class> <!-- demoqaTest.DemoQaTest -->
+      <class name="selenideTest.AppleTest">
+        <test-method signature="checkHref()[pri:0, instance:selenideTest.AppleTest@729d991e]" started-at="2026-06-02T16:48:47 NOVT" name="checkHref" finished-at="2026-06-02T16:48:56 NOVT" duration-ms="8944" status="FAIL">
+          <exception class="com.codeborne.selenide.ex.InvalidStateError">
+            <message>
+              <![CDATA[Invalid element state [By.xpath: //input[@type='text']]: element not interactable
+Screenshot: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.png
+Page source: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.html
+Timeout: 4 s.
+Caused by: ElementNotInteractableException: element not interactable]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[Invalid element state [By.xpath: //input[@type='text']]: element not interactable
+Screenshot: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.png
+Page source: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.html
+Timeout: 4 s.
+Caused by: ElementNotInteractableException: element not interactable
+at com.codeborne.selenide.impl.ExceptionWrapper.wrap(ExceptionWrapper.java:26)
+at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:154)
+at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
+at jdk.proxy2/jdk.proxy2.$Proxy10.setValue(Unknown Source)
+at selenideTest.page.MainPage.search(MainPage.java:16)
+at selenideTest.AppleTest.checkHref(AppleTest.java:16)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=148.0.7778.178)
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.17.0-29-generic', java.version: '21.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5376577f67549039182ca449334ca727, sendKeysToElement {id=f.2744C8377E4ED7013BA28C2625A6606E.d.C399732AE5743D67471C5690B84E4283.e.23, value=[Ljava.lang.CharSequence;@52d6d273}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46129}, goog:processID: 183262, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:46129/devtoo..., se:cdpVersion: 148.0.7778.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (5376577f67549039182ca449334ca727)] -> xpath: //input[@type='text']]
+Session ID: 5376577f67549039182ca449334ca727
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+at com.codeborne.selenide.commands.SetValue.setValueForTextInput(SetValue.java:71)
+at com.codeborne.selenide.commands.SetValue.execute(SetValue.java:43)
+at com.codeborne.selenide.commands.SetValue.execute(SetValue.java:25)
+at com.codeborne.selenide.commands.Commands.execute(Commands.java:161)
+at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.codeborne.selenide.ex.InvalidStateError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkHref -->
+      </class> <!-- selenideTest.AppleTest -->
     </test> <!-- selenideTest -->
+    <test started-at="2026-06-02T16:48:56 NOVT" name="RestTest" finished-at="2026-06-02T16:49:01 NOVT" duration-ms="4991">
+      <class name="demoqaTest.DemoQaTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:demoqaTest.DemoQaTest@17497425]" started-at="2026-06-02T16:48:39 NOVT" name="setUp" finished-at="2026-06-02T16:48:39 NOVT" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+      </class> <!-- demoqaTest.DemoQaTest -->
+      <class name="fakestoreapi.FakestoreapiTest">
+        <test-method signature="correctStruct()[pri:0, instance:fakestoreapi.FakestoreapiTest@534a5a98]" started-at="2026-06-02T16:48:56 NOVT" name="correctStruct" finished-at="2026-06-02T16:48:58 NOVT" duration-ms="1992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- correctStruct -->
+        <test-method signature="correctStructToPOJO()[pri:0, instance:fakestoreapi.FakestoreapiTest@534a5a98]" started-at="2026-06-02T16:48:58 NOVT" name="correctStructToPOJO" finished-at="2026-06-02T16:48:58 NOVT" duration-ms="529" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- correctStructToPOJO -->
+        <test-method signature="createProductShouldReturn201AndCorrectData()[pri:0, instance:fakestoreapi.FakestoreapiTest@534a5a98]" started-at="2026-06-02T16:48:58 NOVT" name="createProductShouldReturn201AndCorrectData" finished-at="2026-06-02T16:48:59 NOVT" duration-ms="513" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProductShouldReturn201AndCorrectData -->
+        <test-method signature="createProductValidateResponseSchema()[pri:0, instance:fakestoreapi.FakestoreapiTest@534a5a98]" started-at="2026-06-02T16:48:59 NOVT" name="createProductValidateResponseSchema" finished-at="2026-06-02T16:49:00 NOVT" duration-ms="895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProductValidateResponseSchema -->
+        <test-method signature="getProductByIdShouldReturn200AndCorrectData()[pri:0, instance:fakestoreapi.FakestoreapiTest@534a5a98]" started-at="2026-06-02T16:49:00 NOVT" name="getProductByIdShouldReturn200AndCorrectData" finished-at="2026-06-02T16:49:00 NOVT" duration-ms="542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProductByIdShouldReturn200AndCorrectData -->
+        <test-method signature="getProductByIdValidateResponseStructure()[pri:0, instance:fakestoreapi.FakestoreapiTest@534a5a98]" started-at="2026-06-02T16:49:00 NOVT" name="getProductByIdValidateResponseStructure" finished-at="2026-06-02T16:49:01 NOVT" duration-ms="514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getProductByIdValidateResponseStructure -->
+      </class> <!-- fakestoreapi.FakestoreapiTest -->
+    </test> <!-- RestTest -->
   </suite> <!-- Test Suite -->
 </testng-results>

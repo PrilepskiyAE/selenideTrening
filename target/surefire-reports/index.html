@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Test_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Test Suite</span>
+              <span class="suite-name border-failed">Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -55,7 +55,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Test_Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">13 methods, 1 failed,   12 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Test_Suite" class="hide-methods failed suite-Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Test_Suite -->
+                      <a href="#" panel-name="suite-Test_Suite" class="show-methods failed suite-Test_Suite"> (show)</a> <!-- show-methods failed suite-Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Test_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Test_Suite" title="selenideTest.AppleTest" class="method navigator-link" hash-for-method="checkHref">checkHref</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -113,7 +127,37 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Test_Suite" title="fakestoreapi.FakestoreapiTest" class="method navigator-link" hash-for-method="correctStruct">correctStruct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Test_Suite" title="fakestoreapi.FakestoreapiTest" class="method navigator-link" hash-for-method="correctStructToPOJO">correctStructToPOJO</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Test_Suite" title="fakestoreapi.FakestoreapiTest" class="method navigator-link" hash-for-method="createProductShouldReturn201AndCorrectData">createProductShouldReturn201AndCorrectData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Test_Suite" title="fakestoreapi.FakestoreapiTest" class="method navigator-link" hash-for-method="createProductValidateResponseSchema">createProductValidateResponseSchema</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Test_Suite" title="demoqaTest.DemoQaTest" class="method navigator-link" hash-for-method="doubleClickButtonTest">doubleClickButtonTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Test_Suite" title="fakestoreapi.FakestoreapiTest" class="method navigator-link" hash-for-method="getProductByIdShouldReturn200AndCorrectData">getProductByIdShouldReturn200AndCorrectData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Test_Suite" title="fakestoreapi.FakestoreapiTest" class="method navigator-link" hash-for-method="getProductByIdValidateResponseStructure">getProductByIdValidateResponseStructure</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -143,6 +187,109 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Test_Suite" class="panel Test_Suite">
+          <div class="suite-Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">selenideTest.AppleTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkHref">
+                  </a> <!-- checkHref -->
+                  <span class="method-name">checkHref</span>
+                  <div class="stack-trace">Invalid element state [By.xpath: //input[@type=&apos;text&apos;]]: element not interactable
+Screenshot: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.png
+Page source: file:/home/admin/IdeaProjects/selenideTrening/build/reports/tests/1780393735988.0.html
+Timeout: 4 s.
+Caused by: ElementNotInteractableException: element not interactable
+	at com.codeborne.selenide.impl.ExceptionWrapper.wrap(ExceptionWrapper.java:26)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:154)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:84)
+	at jdk.proxy2/jdk.proxy2.$Proxy10.setValue(Unknown Source)
+	at selenideTest.page.MainPage.search(MainPage.java:16)
+	at selenideTest.AppleTest.checkHref(AppleTest.java:16)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=148.0.7778.178)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.17.0-29-generic&apos;, java.version: &apos;21.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5376577f67549039182ca449334ca727, sendKeysToElement {id=f.2744C8377E4ED7013BA28C2625A6606E.d.C399732AE5743D67471C5690B84E4283.e.23, value=[Ljava.lang.CharSequence;@52d6d273}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46129}, goog:processID: 183262, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:46129/devtoo..., se:cdpVersion: 148.0.7778.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (5376577f67549039182ca449334ca727)] -&gt; xpath: //input[@type=&apos;text&apos;]]
+Session ID: 5376577f67549039182ca449334ca727
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at com.codeborne.selenide.commands.SetValue.setValueForTextInput(SetValue.java:71)
+	at com.codeborne.selenide.commands.SetValue.execute(SetValue.java:43)
+	at com.codeborne.selenide.commands.SetValue.execute(SetValue.java:25)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:161)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:132)
+	... 33 more
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Test_Suite-class-failed -->
+          <div class="suite-Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">fakestoreapi.FakestoreapiTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="correctStruct">
+                  </a> <!-- correctStruct -->
+                  <span class="method-name">correctStruct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="correctStructToPOJO">
+                  </a> <!-- correctStructToPOJO -->
+                  <span class="method-name">correctStructToPOJO</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createProductShouldReturn201AndCorrectData">
+                  </a> <!-- createProductShouldReturn201AndCorrectData -->
+                  <span class="method-name">createProductShouldReturn201AndCorrectData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createProductValidateResponseSchema">
+                  </a> <!-- createProductValidateResponseSchema -->
+                  <span class="method-name">createProductValidateResponseSchema</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getProductByIdShouldReturn200AndCorrectData">
+                  </a> <!-- getProductByIdShouldReturn200AndCorrectData -->
+                  <span class="method-name">getProductByIdShouldReturn200AndCorrectData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getProductByIdValidateResponseStructure">
+                  </a> <!-- getProductByIdValidateResponseStructure -->
+                  <span class="method-name">getProductByIdValidateResponseStructure</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Test_Suite-class-passed -->
           <div class="suite-Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -209,6 +356,11 @@
       &lt;class name=&quot;selenideTest.AppleTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- selenideTest --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;RestTest&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;fakestoreapi.FakestoreapiTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- RestTest --&gt;
 &lt;/suite&gt; &lt;!-- Test Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -221,6 +373,9 @@
             <ul>
               <li>
                 <span class="test-name">selenideTest (2 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">RestTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -246,36 +401,64 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(13);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'checkButtonTest')
-data.setCell(0, 2, 'demoqaTest.DemoQaTest')
-data.setCell(0, 3, 3583);
+data.setCell(0, 1, 'checkHref')
+data.setCell(0, 2, 'selenideTest.AppleTest')
+data.setCell(0, 3, 8944);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'webTablesTest')
+data.setCell(1, 1, 'checkButtonTest')
 data.setCell(1, 2, 'demoqaTest.DemoQaTest')
-data.setCell(1, 3, 1915);
+data.setCell(1, 3, 3083);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'doubleClickButtonTest')
-data.setCell(2, 2, 'demoqaTest.DemoQaTest')
-data.setCell(2, 3, 1041);
+data.setCell(2, 1, 'correctStruct')
+data.setCell(2, 2, 'fakestoreapi.FakestoreapiTest')
+data.setCell(2, 3, 1992);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'rightClickButtonTest')
+data.setCell(3, 1, 'webTablesTest')
 data.setCell(3, 2, 'demoqaTest.DemoQaTest')
-data.setCell(3, 3, 875);
+data.setCell(3, 3, 1853);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'radioButtonTest')
+data.setCell(4, 1, 'doubleClickButtonTest')
 data.setCell(4, 2, 'demoqaTest.DemoQaTest')
-data.setCell(4, 3, 790);
+data.setCell(4, 3, 917);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'clickButtonTest')
-data.setCell(5, 2, 'demoqaTest.DemoQaTest')
-data.setCell(5, 3, 712);
+data.setCell(5, 1, 'createProductValidateResponseSchema')
+data.setCell(5, 2, 'fakestoreapi.FakestoreapiTest')
+data.setCell(5, 3, 895);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'radioButtonTest')
+data.setCell(6, 2, 'demoqaTest.DemoQaTest')
+data.setCell(6, 3, 792);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'clickButtonTest')
+data.setCell(7, 2, 'demoqaTest.DemoQaTest')
+data.setCell(7, 3, 742);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'rightClickButtonTest')
+data.setCell(8, 2, 'demoqaTest.DemoQaTest')
+data.setCell(8, 3, 673);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'getProductByIdShouldReturn200AndCorrectData')
+data.setCell(9, 2, 'fakestoreapi.FakestoreapiTest')
+data.setCell(9, 3, 542);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'correctStructToPOJO')
+data.setCell(10, 2, 'fakestoreapi.FakestoreapiTest')
+data.setCell(10, 3, 529);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'getProductByIdValidateResponseStructure')
+data.setCell(11, 2, 'fakestoreapi.FakestoreapiTest')
+data.setCell(11, 3, 514);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'createProductShouldReturn201AndCorrectData')
+data.setCell(12, 2, 'fakestoreapi.FakestoreapiTest')
+data.setCell(12, 3, 513);
 window.suiteTableData['Test_Suite']= { tableData: data, tableDiv: 'times-div-Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 21 seconds</span>
               <div id="times-div-Test_Suite">
               </div> <!-- times-div-Test_Suite -->
             </div> <!-- times-div -->
@@ -302,29 +485,69 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">demoqaTest.DemoQaTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">checkButtonTest</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">36 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">clickButtonTest</span>
-                <span class="method-start">3628 ms</span>
+                <span class="method-start">3154 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">doubleClickButtonTest</span>
-                <span class="method-start">4342 ms</span>
+                <span class="method-start">3899 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">radioButtonTest</span>
-                <span class="method-start">5384 ms</span>
+                <span class="method-start">4817 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">rightClickButtonTest</span>
-                <span class="method-start">6425 ms</span>
+                <span class="method-start">5610 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">webTablesTest</span>
-                <span class="method-start">7301 ms</span>
+                <span class="method-start">6284 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">selenideTest.AppleTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkHref</span>
+                <span class="method-start">8139 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">fakestoreapi.FakestoreapiTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">correctStruct</span>
+                <span class="method-start">17122 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">correctStructToPOJO</span>
+                <span class="method-start">19115 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createProductShouldReturn201AndCorrectData</span>
+                <span class="method-start">19645 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createProductValidateResponseSchema</span>
+                <span class="method-start">20159 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getProductByIdShouldReturn200AndCorrectData</span>
+                <span class="method-start">21055 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getProductByIdValidateResponseStructure</span>
+                <span class="method-start">21598 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
