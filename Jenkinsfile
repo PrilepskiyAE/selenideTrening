@@ -5,12 +5,6 @@ pipeline {
         timeout(time: 30, unit: 'MINUTES')
         timestamps()
     }
-
-    tools {
-        maven 'Maven 3.9.9'
-        jdk 'JDK 21'
-    }
-
     stages {
         stage('Checkout') {
             steps {
