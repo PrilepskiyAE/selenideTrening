@@ -18,19 +18,28 @@ pipeline {
             }
         }
 
-        stage('Build and Test') {
+      stage('Build and Test') {
     steps {
-        echo 'Запуск тестов на Java 21...'
-        sh 'mvn -Dmaven.repo.local=${WORKSPACE}/.m2/repository clean test'
+        script {
+            // Запускаем Selenium контейнер
+            sh 'docker run -d --name selenium-chrome --shm-size=2g -p 4444:4444 selenium/standalone-chrome:latest'
+            
+            // Ждём готовности Selenium
+            sh '''
+                until curl -f http://localhost:4444/wd/hub/status; do
+                    sleep 5
+                done
+            '''
+            
+            echo 'Запуск тестов на Java 21 с подключением к Selenium Grid...'
+            sh 'mvn -Dselenium.url=http://localhost:4444/wd/hub -Dmaven.repo.local=${WORKSPACE}/.m2/repository clean test'
+        }
     }
     post {
         always {
-            echo 'Архивируем результаты Allure'
-            archiveArtifacts(
-                artifacts: 'target/allure-results/**',
-                allowEmptyArchive: true,
-                fingerprint: true
-            )
+            // Останавливаем контейнер после тестов
+            sh 'docker stop selenium-chrome || true'
+            sh 'docker rm selenium-chrome || true'
         }
     }
 }
