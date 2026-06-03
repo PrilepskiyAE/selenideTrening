@@ -32,13 +32,6 @@ public class DemoQaTest extends BaseTest {
     private final static String DEP="Testing";
 
 
-    @BeforeSuite
-    public void setUp(){
-        System.out.println("Запускается перед всеми тестами в Suite");
-        Configuration.browserSize = "1920x1080";
-        Configuration.headless = true;
-    }
-
 
     private final static int ROWS_SIZE = 3;
     private final static int HEADERS_SIZE = 7;
