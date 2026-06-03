@@ -11,7 +11,10 @@ pipeline {
                 checkout scm
             }
         }
-
+tools {
+        maven 'Maven 3.9.9'  // Имя из Global Tool Configuration
+        jdk 'JDK 21'     // Имя из Global Tool Configuration
+    }
         stage('Build and Test') {
             steps {
                 echo 'Запуск тестов на Java 21...'
