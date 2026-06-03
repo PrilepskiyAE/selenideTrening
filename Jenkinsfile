@@ -5,16 +5,19 @@ pipeline {
         timeout(time: 30, unit: 'MINUTES')
         timestamps()
     }
+
+    tools {
+        maven 'Maven 3.9.9'  // Имя из Global Tool Configuration
+        jdk 'JDK 21'       // Имя из Global Tool Configuration
+    }
+
     stages {
         stage('Checkout') {
             steps {
                 checkout scm
             }
         }
-tools {
-        maven 'Maven 3.9.9'  // Имя из Global Tool Configuration
-        jdk 'JDK 21'     // Имя из Global Tool Configuration
-    }
+
         stage('Build and Test') {
             steps {
                 echo 'Запуск тестов на Java 21...'
@@ -23,7 +26,11 @@ tools {
             post {
                 always {
                     echo 'Архивируем результаты Allure'
-                    archiveArtifacts artifacts: 'target/allure-results/**', allowEmptyArchive: true
+                    archiveArtifacts(
+                        artifacts: 'target/allure-results/**',
+                        allowEmptyArchive: true,
+                        fingerprint: true
+                    )
                 }
             }
         }
@@ -32,8 +39,10 @@ tools {
             when {
                 expression {
                     script {
-                        def file = new File("${env.WORKSPACE}/target/allure-results")
-                        return file.exists() && file.isDirectory() && file.list().length > 0
+                        def resultsDir = "${env.WORKSPACE}/target/allure-results"
+                        return fileExists(resultsDir) &&
+                               sh(script: "test -d '${resultsDir}' && ls -A '${resultsDir}' | grep -q .",
+                                  returnStatus: true) == 0
                     }
                 }
             }
@@ -53,7 +62,13 @@ tools {
     post {
         always {
             echo 'Очистка workspace...'
-            cleanWs()
+            cleanWs(
+                notFailBuild: true,
+                patterns: [[
+                    type: 'EXCLUDE',
+                    pattern: '**/target/allure-results/**'
+                ]]
+            )
         }
         success {
             echo 'Сборка прошла успешно на Java 21!'
