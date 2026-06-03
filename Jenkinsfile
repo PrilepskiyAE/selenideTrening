@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'eclipse-temurin:21-jdk-jammy'
-            args '-v /var/run/docker.sock:/var/run/docker.sock -v /tmp:/tmp'
-        }
-    }
+    agent any
 
     environment {
         SELENOID_URL = 'http://selenoid:4444/wd/hub'
