@@ -19,21 +19,21 @@ pipeline {
         }
 
         stage('Build and Test') {
-            steps {
-                echo 'Запуск тестов на Java 21...'
-                sh 'mvn clean test'
-            }
-            post {
-                always {
-                    echo 'Архивируем результаты Allure'
-                    archiveArtifacts(
-                        artifacts: 'target/allure-results/**',
-                        allowEmptyArchive: true,
-                        fingerprint: true
-                    )
-                }
-            }
+    steps {
+        echo 'Запуск тестов на Java 21...'
+        sh 'mvn -Dmaven.repo.local=${WORKSPACE}/.m2/repository clean test'
+    }
+    post {
+        always {
+            echo 'Архивируем результаты Allure'
+            archiveArtifacts(
+                artifacts: 'target/allure-results/**',
+                allowEmptyArchive: true,
+                fingerprint: true
+            )
         }
+    }
+}
 
         stage('Generate Allure Report') {
             when {
