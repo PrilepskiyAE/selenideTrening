@@ -1,14 +1,21 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'eclipse-temurin:21-jdk-jammy'
+            args '-v /var/run/docker.sock:/var/run/docker.sock -v /tmp:/tmp'
+        }
+    }
 
-    options {
-        timeout(time: 30, unit: 'MINUTES')
-        timestamps()
+    environment {
+        SELENOID_URL = 'http://selenoid:4444/wd/hub'
+        TEST_ENV = 'staging'
+        MAVEN_OPTS = '-Dmaven.repo.local=.m2/repository'
+        ALLURE_RESULTS = 'target/allure-results'
+        ALLURE_REPORT = 'target/allure-report'
     }
 
     tools {
-        maven 'Maven 3.9.9'  // Имя из Global Tool Configuration
-        jdk 'JDK 21'       // Имя из Global Tool Configuration
+        maven 'maven-3.9.9'
     }
 
     stages {
@@ -18,45 +25,36 @@ pipeline {
             }
         }
 
-      stage('Build and Test') {
-    steps {
-        script {
-            // Запускаем Selenium контейнер
-            sh 'docker run -d --name selenium-chrome --shm-size=2g -p 4444:4444 selenium/standalone-chrome:latest'
-            
-            // Ждём готовности Selenium
-            sh '''
-                until curl -f http://localhost:4444/wd/hub/status; do
-                    sleep 5
-                done
-            '''
-            
-            echo 'Запуск тестов на Java 21 с подключением к Selenium Grid...'
-            sh 'mvn -Dselenium.url=http://localhost:4444/wd/hub -Dmaven.repo.local=${WORKSPACE}/.m2/repository clean test'
+        stage('Build & Dependencies') {
+            steps {
+                sh 'mvn clean compile -DskipTests=true'
+            }
         }
-    }
-    post {
-        always {
-            // Останавливаем контейнер после тестов
-            sh 'docker stop selenium-chrome || true'
-            sh 'docker rm selenium-chrome || true'
-        }
-    }
-}
 
-        stage('Generate Allure Report') {
-            when {
-                expression {
-                    script {
-                        def resultsDir = "${env.WORKSPACE}/target/allure-results"
-                        return fileExists(resultsDir) &&
-                               sh(script: "test -d '${resultsDir}' && ls -A '${resultsDir}' | grep -q .",
-                                  returnStatus: true) == 0
+        stage('Run Selenide Tests with Selenoid') {
+            steps {
+                script {
+                    try {
+                        sh """
+                        mvn test \
+                            -Dselenoid.url=$SELENOID_URL \
+                            -Dtest.env=$TEST_ENV \
+                            -Dbrowser=chrome \
+                            -DbrowserVersion=latest
+                        """
+                    } catch (Exception e) {
+                        echo "Tests failed: ${e.message}"
+                        throw e
                     }
                 }
             }
+        }
+
+        stage('Generate Allure Report') {
+            when {
+                expression { fileExists('target/allure-results') }
+            }
             steps {
-                echo 'Генерируем отчёт Allure...'
                 allure([
                     includeProperties: false,
                     jdk: '',
@@ -66,24 +64,30 @@ pipeline {
                 ])
             }
         }
+
+        stage('Archive Test Results') {
+            steps {
+                archiveArtifacts artifacts: 'target/surefire-reports/**/*', \
+                    onlyIfSuccessful: false, \
+                    fingerprint: true
+                archiveArtifacts artifacts: 'target/allure-results/**/*', \
+                    onlyIfSuccessful: false, \
+                    fingerprint: true
+            }
+        }
     }
 
     post {
-        always {
-            echo 'Очистка workspace...'
-            cleanWs(
-                notFailBuild: true,
-                patterns: [[
-                    type: 'EXCLUDE',
-                    pattern: '**/target/allure-results/**'
-                ]]
-            )
-        }
         success {
-            echo 'Сборка прошла успешно на Java 21!'
+            echo 'All tests passed successfully!'
+            slackSend channel: '#qa-tests', message: '✅ Selenide tests PASSED on Selenoid!', color: '#00FF00'
         }
         failure {
-            echo 'Сборка завершилась с ошибкой на Java 21!'
+            echo 'Tests failed!'
+            slackSend channel: '#qa-tests', message: '❌ Selenide tests FAILED on Selenoid! Check the build.', color: '#FF0000'
+        }
+        always {
+            cleanWs()
         }
     }
 }
