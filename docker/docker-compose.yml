@@ -1,8 +1,6 @@
-version: '3'
 services:
   selenoid:
     image: aerokube/selenoid:latest-release
-    network_mode: bridge
     ports:
       - "4444:4444"
     volumes:
@@ -12,20 +10,25 @@ services:
       - "./logs:/opt/selenoid/logs"
     environment:
       - OVERRIDE_VIDEO_OUTPUT_DIR=./video
+      - SELENOID_DISABLE_DOCKER_CLIENT_VERSION_CHECK=true
     command: [
       "-conf", "/etc/selenoid/browsers.json",
       "-video-output-dir", "/opt/selenoid/video",
-      "-log-output-dir", "/opt/selenoid/logs",
       "-capture-driver-logs",
-      "-disable-docker",
-      "-limit", "5"
+      "-limit", "5",
+      "-disable-docker", "false"
     ]
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "http://localhost:4444/status", "-q", "-T", "10"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   selenoid-ui:
     image: aerokube/selenoid-ui:latest-release
-    network_mode: bridge
-    links:
-      - selenoid
     ports:
       - "8989:8080"
+    depends_on:
+      selenoid:
+        condition: service_healthy
     command: ["--selenoid-uri", "http://selenoid:4444"]

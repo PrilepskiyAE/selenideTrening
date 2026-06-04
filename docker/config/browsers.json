@@ -1,0 +1,15 @@
+{
+  "chrome": {
+    "default": "128.0",
+    "versions": {
+      "128.0": {
+        "image": "selenoid/chrome:128.0",
+        "port": "4444",
+        "env": ["TZ=UTC"],
+        "tmpfs": {
+          "/tmp": "size=128m"
+        }
+      }
+    }
+  }
+}
